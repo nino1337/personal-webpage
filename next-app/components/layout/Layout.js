@@ -19,10 +19,10 @@ const Layout = () => {
         {!currentPage.indexable && <meta name="robots" content="noindex" />}
         <link rel="icon" href={process.env.COCKPIT_BASE_URL + siteSettings.favIcon.path} />
       </Head>
-      <Navigation />
       <S.Main>
         {currentPage.components && <CockpitComponents components={currentPage.components} />}
       </S.Main>
+      <Navigation />
     </>
   );
 };

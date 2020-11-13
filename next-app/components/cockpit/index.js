@@ -6,3 +6,4 @@ export { default as Divider } from './divider/Divider';
 export { default as Section } from './section/Section';
 export { default as Gallery } from './gallery/Gallery';
 export { default as Image } from './image/Image';
+export { default as Stage } from './stage/Stage';

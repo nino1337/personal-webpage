@@ -12,6 +12,7 @@ const availableComponents = {
   section: CockpitComponent.Section,
   gallery: CockpitComponent.Gallery,
   image: CockpitComponent.Image,
+  stage: CockpitComponent.Stage,
 };
 
 const CockpitComponents = ({ components }) =>

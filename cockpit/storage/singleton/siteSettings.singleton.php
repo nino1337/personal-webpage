@@ -59,7 +59,7 @@
         'multiple' => false,
         'limit' => false,
       ),
-      'width' => '1-2',
+      'width' => '1-1',
       'lst' => true,
       'acl' => 
       array (
@@ -67,29 +67,6 @@
       'required' => true,
     ),
     3 => 
-    array (
-      'name' => '404',
-      'label' => '',
-      'type' => 'collectionlink',
-      'default' => '',
-      'info' => '',
-      'group' => '',
-      'localize' => false,
-      'options' => 
-      array (
-        'link' => 'pages',
-        'display' => '404 Seite',
-        'multiple' => false,
-        'limit' => false,
-      ),
-      'width' => '1-2',
-      'lst' => true,
-      'acl' => 
-      array (
-      ),
-      'required' => true,
-    ),
-    4 => 
     array (
       'name' => 'footerText',
       'label' => 'Footer-Inhalt',
@@ -108,7 +85,7 @@
       ),
       'required' => true,
     ),
-    5 => 
+    4 => 
     array (
       'name' => 'favIcon',
       'label' => 'Favicon',
@@ -130,7 +107,7 @@
   ),
   'data' => NULL,
   '_created' => 1603984709,
-  '_modified' => 1604592888,
+  '_modified' => 1605257970,
   'description' => '',
   'acl' => 
   array (

@@ -5,12 +5,47 @@ export const Button = styled.a`
   cursor: pointer;
   border-radius: 3px;
   display: block;
-  min-width: 200px;
+  min-width: 138px;
   max-width: 100%;
-  padding: 1rem;
+  padding: 1rem 0.8rem;
   text-align: center;
   transition: color 0.2s, background-color 0.2s;
+  text-decoration: none;
   width: fit-content;
+
+  ${({ variant, theme }) =>
+    variant === 'stage' &&
+    css`
+      background-color: transparent;
+      border: 1px solid ${theme.colors.white};
+      color: ${theme.colors.white};
+      margin: 0 auto;
+      overflow: hidden;
+      transition: border 0.5s;
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: '';
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 150%;
+        transform: translateX(-110%) skew(45deg);
+        transition: transform 0.5s;
+        background-color: ${theme.colors.primary};
+        z-index: -1;
+      }
+
+      &:hover {
+        border-color: ${theme.colors.primary};
+
+        &::after {
+          transform: translateX(-20%) skew(45deg);
+        }
+      }
+    `}
 
   ${({ variant, theme }) =>
     variant === 'primary' &&

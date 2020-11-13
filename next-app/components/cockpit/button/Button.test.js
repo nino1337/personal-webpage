@@ -5,10 +5,10 @@ import Button from './Button';
 
 describe('<Button />', () => {
   let utils;
-  describe('children', () => {
-    describe('when children are given', () => {
-      it('renders the given children', () => {
-        utils = render(<Button>Test</Button>);
+  describe('text', () => {
+    describe('when a text is given', () => {
+      it('renders the given text', () => {
+        utils = render(<Button text="Test" />);
         const { getByText } = utils;
 
         expect(getByText('Test')).toBeInTheDocument();
@@ -18,7 +18,7 @@ describe('<Button />', () => {
 
   describe('accessibility', () => {
     it('is accessible according to https://github.com/nickcolley/jest-axe', async () => {
-      utils = render(<Button>Test</Button>);
+      utils = render(<Button text="Test" />);
       const { container } = utils;
       const component = await axe(container);
 

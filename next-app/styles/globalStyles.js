@@ -1,38 +1,20 @@
 import { css } from '@emotion/core';
 
-import AvantGardeBook from './fonts/avantgarde/ITCAvantGardeStd-Bk.ttf';
-import AvantGardeBold from './fonts/avantgarde/ITCAvantGardeStd-Bold.ttf';
-import SofiaBold from './fonts/sofia/SofiaProBold.ttf';
-// fonts
-import SofiaLight from './fonts/sofia/SofiaProLight.ttf';
+import HelveticaNeueLight from './fonts/helvetica/HelveticaNeueLight.ttf';
+import HelveticaNeueMedium from './fonts/helvetica/HelveticaNeueMedium.ttf';
+import mq from './mq';
 
 const dynamicStyle = (theme) => css`
   @font-face {
     font-family: ${theme.fonts.primary};
-    src: url(${SofiaLight});
+    src: url(${HelveticaNeueMedium});
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: ${theme.fonts.primary};
-    src: url(${SofiaBold});
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: ${theme.fonts.secondary};
-    src: url(${AvantGardeBook});
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: ${theme.fonts.secondary};
-    src: url(${AvantGardeBold});
-    font-weight: bold;
+    font-family: ${theme.fonts.primaryLight};
+    src: url(${HelveticaNeueLight});
     font-style: normal;
     font-display: swap;
   }
@@ -50,7 +32,7 @@ const dynamicStyle = (theme) => css`
 
   body {
     color: ${theme.colors.text};
-    font-family: ${theme.fonts.primary};
+    font-family: ${theme.fonts.primaryLight};
     font-size: 1.6rem;
     line-height: 1.6rem;
     margin: 0;
@@ -67,6 +49,28 @@ const dynamicStyle = (theme) => css`
   ol {
     margin: 0;
     padding: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: normal;
+  }
+
+  h1 {
+    color: ${theme.colors.white};
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 12rem;
+
+    ${mq.lg} {
+      font-size: 5.2rem;
+    }
+  }
+
+  h2,
+  h3 {
+    font-family: ${theme.fonts.primary};
   }
 `;
 
