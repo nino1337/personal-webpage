@@ -6,6 +6,7 @@ import mq from '../../../styles/mq';
 export const Section = styled.section`
   padding: 2.4rem 0;
   width: 100%;
+  min-height: 100vh;
 
   ${mq.md} {
     padding: 3.2rem 0;
@@ -19,23 +20,9 @@ export const Section = styled.section`
     `}
 
   ${({ variant, theme }) =>
-    variant === 'primary' &&
+    variant === 'lightGrey' &&
     css`
-      background-color: ${theme.colors.sections.primary.background};
-      color: ${theme.colors.sections.primary.text};
-    `}
-
-  ${({ variant, theme }) =>
-    variant === 'secondary' &&
-    css`
-      background-color: ${theme.colors.sections.secondary.background};
-      color: ${theme.colors.sections.secondary.text};
-    `}
-
-  ${({ variant, theme }) =>
-    variant === 'accent' &&
-    css`
-      background-color: ${theme.colors.sections.accent.background};
-      color: ${theme.colors.sections.accent.text};
+      background-color: ${theme.colors.sections.lightGrey.background};
+      color: ${theme.colors.sections.lightGrey.text};
     `}
 `;

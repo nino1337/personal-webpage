@@ -19,6 +19,7 @@ export const Button = styled.a`
       background-color: transparent;
       border: 1px solid ${theme.colors.white};
       color: ${theme.colors.white};
+      font-size: 2rem;
       margin: 0 auto;
       overflow: hidden;
       transition: border 0.5s;

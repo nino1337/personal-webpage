@@ -17,11 +17,12 @@ const theme = {
         text: shadows,
         background: white,
       },
-      grey: {
+      lightGrey: {
         text: shadows,
         background: lightGrey,
       },
     },
+    boxShadow: '0px 3px 6px 0px rgba(25, 24, 19, 0.16)',
   },
   fonts: {
     primary: 'Helvetica Neue Medium',
