@@ -67,7 +67,7 @@
                 "localize": false,
                 "options": {
                     "cls": "",
-                    "options": "primary, secondary, accent, white",
+                    "options": "lightGrey, white",
                     "default": "white"
                 },
                 "width": "1-1",
@@ -150,6 +150,45 @@
                 "width": "1-1",
                 "lst": true,
                 "acl": []
+            }
+        ],
+        "group": "Page-Component"
+    },
+    "stickyNavigation": {
+        "label": "Sticky Navigation",
+        "dialog": "normal",
+        "children": false,
+        "fields": [
+            {
+                "name": "navigationItems",
+                "label": "Navigation-Items",
+                "type": "repeater",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": {
+                    "field": {
+                        "type": "set",
+                        "label": "item",
+                        "options": {
+                            "fields": [
+                                {
+                                    "name": "name",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "anchor",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "width": "1-1",
+                "lst": true,
+                "acl": [],
+                "required": true
             }
         ],
         "group": "Page-Component"

@@ -22,12 +22,17 @@ const dynamicStyle = (theme) => css`
   html {
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   *,
   *:before,
   *:after {
     box-sizing: inherit;
+  }
+
+  * {
+    transition: color 0.2s, background-color 0.2s;
   }
 
   body {
@@ -37,6 +42,7 @@ const dynamicStyle = (theme) => css`
     line-height: 1.6rem;
     margin: 0;
     overflow-x: hidden;
+    height: 150vh;
   }
 
   img {
@@ -49,6 +55,11 @@ const dynamicStyle = (theme) => css`
   ol {
     margin: 0;
     padding: 0;
+  }
+
+  a {
+    color: ${theme.colors.primary};
+    text-decoration: none;
   }
 
   h1,

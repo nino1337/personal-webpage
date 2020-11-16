@@ -13,6 +13,7 @@ const availableComponents = {
   gallery: CockpitComponent.Gallery,
   image: CockpitComponent.Image,
   stage: CockpitComponent.Stage,
+  stickyNavigation: CockpitComponent.StickyNavigation,
 };
 
 const CockpitComponents = ({ components }) =>
