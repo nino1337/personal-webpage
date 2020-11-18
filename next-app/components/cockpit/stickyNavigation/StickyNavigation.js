@@ -21,6 +21,7 @@ const StickyNavigation = ({ navigationItems }) => {
       setIsActiveSection(windowTop);
     };
 
+    onScroll();
     window.addEventListener('scroll', onScroll);
 
     return () => {
@@ -29,7 +30,9 @@ const StickyNavigation = ({ navigationItems }) => {
   }, [navFixed]);
 
   useEffect(() => {
-    const nodes = navigationItems.map(({ value }) => document.querySelector(value.anchor));
+    const nodes = navigationItems
+      .map(({ value }) => document.querySelector(value.anchor))
+      .filter((node) => node);
 
     setAnchorNodes(nodes);
   }, []);

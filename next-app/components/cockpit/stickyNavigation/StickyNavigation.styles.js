@@ -13,6 +13,7 @@ export const StickyNavigation = styled.nav`
   display: flex;
   height: ${({ navHeight }) => `${navHeight}px`};
   justify-content: center;
+  position: relative;
 
   ${({ isFixed }) =>
     isFixed &&
