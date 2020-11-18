@@ -6,7 +6,7 @@ import propTypes from 'prop-types';
 import React from 'react';
 import SlickSlider from 'react-slick';
 
-import { Image } from '../cockpit';
+import Image from '../cockpit/image/Image';
 import * as S from './Slider.styles';
 
 const Slider = ({ items, settings = {} }) => {

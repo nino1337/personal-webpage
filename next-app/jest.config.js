@@ -10,4 +10,7 @@ module.exports = {
     '^.+\\.js$': 'babel-jest',
   },
   snapshotSerializers: ['jest-emotion'],
+  moduleNameMapper: {
+    '\\.(css|less)$': '<rootDir>/utils/styleMock.js',
+  },
 };

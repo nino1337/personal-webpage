@@ -2,7 +2,9 @@ import propTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import Modal from '../../modal/Modal';
-import { Button, Gallery, Image } from '../index';
+import Button from '../button/Button';
+import Gallery from '../gallery/Gallery';
+import Image from '../image/Image';
 import * as S from './References.styles';
 
 const References = ({ references }) => {

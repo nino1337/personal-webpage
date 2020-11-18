@@ -11,6 +11,22 @@ import React from 'react';
 import globalStyles from '../styles/globalStyles';
 import theme from '../styles/theme';
 
+window.matchMedia =
+  window.matchMedia ||
+  function () {
+    return {
+      matches: false,
+      addListener: function () {},
+      removeListener: function () {},
+    };
+  };
+
+window.requestAnimationFrame =
+  window.requestAnimationFrame ||
+  function (callback) {
+    setTimeout(callback, 0);
+  };
+
 const Wrapper = ({ children }) => (
   <ThemeProvider theme={theme}>
     <Global styles={globalStyles} />
