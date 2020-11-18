@@ -66,6 +66,12 @@ const dynamicStyle = (theme) => css`
   h2,
   h3 {
     font-weight: normal;
+    margin: 0;
+  }
+
+  h2,
+  h3 {
+    font-family: ${theme.fonts.primary};
   }
 
   h1 {
@@ -79,9 +85,21 @@ const dynamicStyle = (theme) => css`
     }
   }
 
-  h2,
+  h2 {
+    font-size: 2.8rem;
+    line-height: 1;
+
+    ${mq.lg} {
+      font-size: 4rem;
+    }
+  }
+
   h3 {
-    font-family: ${theme.fonts.primary};
+    font-size: 2.4rem;
+
+    ${mq.lg} {
+      font-size: 3rem;
+    }
   }
 `;
 

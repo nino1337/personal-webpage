@@ -28,6 +28,7 @@ const theme = {
     primary: 'Helvetica Neue Medium',
     primaryLight: 'Helvetica Neue Light',
   },
+  borderRadius: '3px',
 };
 
 export default theme;

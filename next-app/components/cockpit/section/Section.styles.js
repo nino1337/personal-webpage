@@ -9,7 +9,7 @@ export const Section = styled.section`
   min-height: 100vh;
 
   ${mq.md} {
-    padding: 3.2rem 0;
+    padding: 12rem 0;
   }
 
   ${({ variant, theme }) =>

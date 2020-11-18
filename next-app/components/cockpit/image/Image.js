@@ -19,7 +19,7 @@ Image.propTypes = {
       asset: propTypes.string,
     }),
     path: propTypes.string,
-  }).isRequired,
+  }),
   height: propTypes.string,
   width: propTypes.string,
   isCockpitImage: propTypes.bool,

@@ -87,6 +87,19 @@
                 "width": "1-1",
                 "lst": true,
                 "acl": []
+            },
+            {
+                "name": "headline",
+                "label": "Section \u00dcberschrift",
+                "type": "text",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
             }
         ],
         "group": "Page-Component"
@@ -179,6 +192,61 @@
                                 },
                                 {
                                     "name": "anchor",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "width": "1-1",
+                "lst": true,
+                "acl": [],
+                "required": true
+            }
+        ],
+        "group": "Page-Component"
+    },
+    "references": {
+        "label": "Referenzen",
+        "dialog": "normal",
+        "children": false,
+        "fields": [
+            {
+                "name": "references",
+                "label": "Referenzen",
+                "type": "repeater",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": {
+                    "field": {
+                        "type": "set",
+                        "label": "item",
+                        "options": {
+                            "fields": [
+                                {
+                                    "name": "teaserImage",
+                                    "type": "image"
+                                },
+                                {
+                                    "name": "teaserHeadline",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "teaserText",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "websiteUrl",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "websiteGallery",
+                                    "type": "gallery"
+                                },
+                                {
+                                    "name": "animationDelay",
                                     "type": "text"
                                 }
                             ]

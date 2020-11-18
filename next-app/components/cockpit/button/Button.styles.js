@@ -3,9 +3,8 @@ import styled from '@emotion/styled';
 
 export const Button = styled.a`
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: ${({ theme }) => theme.borderRadius};
   display: block;
-  min-width: 138px;
   max-width: 100%;
   padding: 1rem 0.8rem;
   text-align: center;
@@ -51,7 +50,7 @@ export const Button = styled.a`
   ${({ variant, theme }) =>
     variant === 'primary' &&
     css`
-      background-color: ${theme.colors.grey};
+      background-color: ${theme.colors.primary};
       color: ${theme.colors.white};
     `}
 
@@ -59,8 +58,8 @@ export const Button = styled.a`
     variant === 'secondary' &&
     css`
       background-color: ${theme.colors.white};
-      border: 1px solid ${theme.colors.grey};
-      color: ${theme.colors.grey};
+      border: 1px solid ${theme.colors.primary};
+      color: ${theme.colors.primary};
     `}
 
     ${({ variant, theme }) =>
@@ -69,7 +68,7 @@ export const Button = styled.a`
       background-color: ${theme.colors.white};
       padding: 0;
       min-width: auto;
-      color: ${theme.colors.grey};
+      color: ${theme.colors.secondary};
       text-decoration: underline;
     `}
 
