@@ -260,5 +260,71 @@
             }
         ],
         "group": "Page-Component"
+    },
+    "person": {
+        "label": "Person",
+        "dialog": "normal",
+        "children": false,
+        "fields": [
+            {
+                "name": "image",
+                "label": "Image",
+                "type": "image",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            },
+            {
+                "name": "socialMedia",
+                "label": "Social Media",
+                "type": "repeater",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": {
+                    "field": {
+                        "type": "set",
+                        "name": "socialMediaItem",
+                        "options": {
+                            "fields": [
+                                {
+                                    "type": "text",
+                                    "name": "url",
+                                    "label": "Url"
+                                },
+                                {
+                                    "type": "image",
+                                    "name": "icon",
+                                    "label": "Icon"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            },
+            {
+                "name": "text",
+                "label": "Text",
+                "type": "textarea",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            }
+        ],
+        "group": "Page-Component"
     }
 }

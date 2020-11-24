@@ -8,4 +8,5 @@ export { default as Gallery } from './gallery/Gallery';
 export { default as Image } from './image/Image';
 export { default as Stage } from './stage/Stage';
 export { default as References } from './references/References';
+export { default as Person } from './person/Person';
 export { default as StickyNavigation } from './stickyNavigation/StickyNavigation';
