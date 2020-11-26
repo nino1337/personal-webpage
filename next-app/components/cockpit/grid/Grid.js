@@ -12,7 +12,7 @@ const Grid = ({ columns = [] }) => {
     <Row>
       {columns.length &&
         columns.map((column, index) => (
-          <Col xs={12} sm={columnLength > 1 ? 6 : 12} md={12 / columnLength} key={`key-${index}`}>
+          <Col xs={12} md={12 / columnLength} key={`key-${index}`}>
             <CockpitComponents components={column.children} />
           </Col>
         ))}

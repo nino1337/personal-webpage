@@ -9,4 +9,5 @@ export { default as Image } from './image/Image';
 export { default as Stage } from './stage/Stage';
 export { default as References } from './references/References';
 export { default as Person } from './person/Person';
+export { default as Timeline } from './timeline/Timeline';
 export { default as StickyNavigation } from './stickyNavigation/StickyNavigation';

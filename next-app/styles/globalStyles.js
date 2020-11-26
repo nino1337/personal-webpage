@@ -57,6 +57,10 @@ const dynamicStyle = (theme) => css`
     padding: 0;
   }
 
+  p {
+    line-height: 1;
+  }
+
   a {
     color: ${theme.colors.primary};
     text-decoration: none;
@@ -67,6 +71,7 @@ const dynamicStyle = (theme) => css`
   h3 {
     font-weight: normal;
     margin: 0;
+    line-height: 1;
   }
 
   h2,

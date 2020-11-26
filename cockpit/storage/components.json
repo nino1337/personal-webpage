@@ -326,5 +326,61 @@
             }
         ],
         "group": "Page-Component"
+    },
+    "timeline": {
+        "label": "Timeline",
+        "dialog": "normal",
+        "children": false,
+        "fields": [
+            {
+                "name": "item",
+                "label": "Item",
+                "type": "repeater",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": {
+                    "field": {
+                        "type": "set",
+                        "name": "experience",
+                        "label": "Erfahrung",
+                        "options": {
+                            "fields": [
+                                {
+                                    "type": "text",
+                                    "name": "fromTo",
+                                    "label": "Zeitabschnitt"
+                                },
+                                {
+                                    "type": "text",
+                                    "name": "type",
+                                    "label": "Art der Anstellung \/ des Studiums"
+                                },
+                                {
+                                    "type": "text",
+                                    "name": "jobTitle",
+                                    "label": "Job Titel \/ Bezeichnung"
+                                },
+                                {
+                                    "type": "image",
+                                    "name": "icon",
+                                    "label": "Erfahrung"
+                                },
+                                {
+                                    "type": "text",
+                                    "name": "company",
+                                    "label": "Unternehmen \/ Hochschule"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            }
+        ],
+        "group": "Page-Component"
     }
 }

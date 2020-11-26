@@ -2,8 +2,7 @@ import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import { useRouter } from 'next/router';
 import propTypes from 'prop-types';
-import { useEffect, useState } from 'react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import LocalizationContext from '../localization/context';
 import getTranslationsFromPage from '../localization/getTranslationsFromPage';
@@ -14,9 +13,13 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    const navigatorLanguage = navigator.language || navigator.userLanguage;
+    if (router.asPath !== '/') {
+      router.push('/');
+    } else {
+      const navigatorLanguage = navigator.language || navigator.userLanguage;
 
-    setLocalizedData(getTranslationsFromPage(navigatorLanguage, pageProps));
+      setLocalizedData(getTranslationsFromPage(navigatorLanguage, pageProps));
+    }
     // keep app state in sync with current page
   }, [router.asPath]);
 

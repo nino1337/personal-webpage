@@ -16,6 +16,7 @@ const availableComponents = {
   stickyNavigation: CockpitComponent.StickyNavigation,
   references: CockpitComponent.References,
   person: CockpitComponent.Person,
+  timeline: CockpitComponent.Timeline,
 };
 
 const CockpitComponents = ({ components }) =>
