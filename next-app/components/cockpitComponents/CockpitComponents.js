@@ -17,6 +17,8 @@ const availableComponents = {
   references: CockpitComponent.References,
   person: CockpitComponent.Person,
   timeline: CockpitComponent.Timeline,
+  principles: CockpitComponent.Principles,
+  contact: CockpitComponent.Contact,
 };
 
 const CockpitComponents = ({ components }) =>

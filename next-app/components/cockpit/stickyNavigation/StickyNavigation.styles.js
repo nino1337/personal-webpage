@@ -43,7 +43,7 @@ export const Item = styled.li`
 
 export const Link = styled.a`
   color: ${({ theme, isActive }) => (isActive ? theme.colors.secondary : theme.colors.text)};
-  font-size: 2rem;
+  font-size: 1.8rem;
   overflow: hidden;
   padding: 16px;
   position: relative;

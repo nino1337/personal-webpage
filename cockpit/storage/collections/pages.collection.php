@@ -75,7 +75,7 @@
       array (
         'slug' => true,
       ),
-      'width' => '1-2',
+      'width' => '1-1',
       'lst' => true,
       'acl' => 
       array (
@@ -94,7 +94,7 @@
       'options' => 
       array (
       ),
-      'width' => '1-2',
+      'width' => '1-1',
       'lst' => false,
       'acl' => 
       array (
@@ -113,66 +113,13 @@
       'options' => 
       array (
       ),
-      'width' => '1-2',
+      'width' => '1-1',
       'lst' => true,
       'acl' => 
       array (
       ),
     ),
     6 => 
-    array (
-      'name' => 'menu',
-      'label' => 'Menü',
-      'type' => 'set',
-      'default' => '',
-      'info' => 'In welchem Menü soll die Seite angezeigt werden',
-      'group' => '',
-      'localize' => false,
-      'options' => 
-      array (
-        'fields' => 
-        array (
-          0 => 
-          array (
-            'name' => 'header',
-            'type' => 'boolean',
-          ),
-          1 => 
-          array (
-            'name' => 'footer',
-            'type' => 'boolean',
-          ),
-        ),
-      ),
-      'width' => '1-2',
-      'lst' => false,
-      'acl' => 
-      array (
-      ),
-    ),
-    7 => 
-    array (
-      'name' => 'subPages',
-      'label' => 'Unterseiten',
-      'type' => 'collectionlink',
-      'default' => '',
-      'info' => '',
-      'group' => 'Unterseiten',
-      'localize' => false,
-      'options' => 
-      array (
-        'link' => 'subpages',
-        'display' => 'Unterseiten',
-        'multiple' => true,
-        'limit' => false,
-      ),
-      'width' => '1-1',
-      'lst' => false,
-      'acl' => 
-      array (
-      ),
-    ),
-    8 => 
     array (
       'name' => 'components',
       'label' => 'Elemente',
@@ -195,7 +142,7 @@
   'sortable' => true,
   'in_menu' => false,
   '_created' => 1603983467,
-  '_modified' => 1604409791,
+  '_modified' => 1606501533,
   'color' => '#FFCE54',
   'acl' => 
   array (

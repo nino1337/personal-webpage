@@ -6,7 +6,6 @@ import mq from '../../../styles/mq';
 export const Section = styled.section`
   padding: 2.4rem 0;
   width: 100%;
-  min-height: 100vh;
 
   ${mq.md} {
     padding: 12rem 0;

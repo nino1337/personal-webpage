@@ -11,3 +11,5 @@ export { default as References } from './references/References';
 export { default as Person } from './person/Person';
 export { default as Timeline } from './timeline/Timeline';
 export { default as StickyNavigation } from './stickyNavigation/StickyNavigation';
+export { default as Principles } from './principles/Principles';
+export { default as Contact } from './contact/Contact';

@@ -11,6 +11,7 @@ export const Button = styled.a`
   transition: color 0.2s, background-color 0.2s;
   text-decoration: none;
   width: fit-content;
+  min-width: 120px;
 
   ${({ variant, theme }) =>
     variant === 'stage' &&

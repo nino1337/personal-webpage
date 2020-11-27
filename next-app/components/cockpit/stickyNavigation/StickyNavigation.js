@@ -9,7 +9,7 @@ const StickyNavigation = ({ navigationItems }) => {
   const [navFixed, setNavFixed] = useState(false);
   const stickyNavigation = useRef(null);
   const navContainer = useRef(null);
-  const NAV_HEIGHT = 90;
+  const NAV_HEIGHT = 60;
 
   useEffect(() => {
     const onScroll = () => {

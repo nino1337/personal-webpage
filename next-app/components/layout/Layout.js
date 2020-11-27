@@ -2,7 +2,9 @@ import Head from 'next/head';
 import React, { useContext } from 'react';
 
 import LocalizationContext from '../../localization/context';
+import BackToTop from '../backToTop/BackToTop';
 import CockpitComponents from '../cockpitComponents/CockpitComponents';
+import Footer from '../footer/Footer';
 import * as S from './Layout.styles';
 
 const Layout = () => {
@@ -21,6 +23,8 @@ const Layout = () => {
       <S.Main>
         {currentPage.components && <CockpitComponents components={currentPage.components} />}
       </S.Main>
+      <Footer />
+      <BackToTop />
     </>
   );
 };

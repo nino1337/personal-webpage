@@ -382,5 +382,72 @@
             }
         ],
         "group": "Page-Component"
+    },
+    "principles": {
+        "label": "Prinzipien",
+        "dialog": "normal",
+        "children": false,
+        "fields": [
+            {
+                "name": "items",
+                "label": "Items",
+                "type": "repeater",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": {
+                    "field": {
+                        "type": "set",
+                        "name": "items",
+                        "label": "Prinzip",
+                        "options": {
+                            "fields": [
+                                {
+                                    "type": "image",
+                                    "name": "icon",
+                                    "label": "Icon"
+                                },
+                                {
+                                    "type": "text",
+                                    "name": "title",
+                                    "label": "Title"
+                                },
+                                {
+                                    "type": "text",
+                                    "name": "text",
+                                    "label": "Text"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            }
+        ],
+        "group": "Page-Component"
+    },
+    "contact": {
+        "label": "Kontakt",
+        "dialog": "normal",
+        "children": false,
+        "fields": [
+            {
+                "name": "headline",
+                "label": "",
+                "type": "text",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            }
+        ],
+        "group": "Page-Component"
     }
 }
