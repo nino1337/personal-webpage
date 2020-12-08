@@ -1,3 +1,5 @@
+import 'intersection-observer';
+
 import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import { useRouter } from 'next/router';

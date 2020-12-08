@@ -21,7 +21,7 @@ const Section = ({
   const [showComponents, setShowComponents] = React.useState(false);
 
   if (inViewport) {
-    setTimeout(() => setShowComponents(true), 300);
+    setTimeout(() => setShowComponents(true), 200);
   }
 
   return (
