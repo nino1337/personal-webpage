@@ -17,19 +17,20 @@ const availableComponents = {
   references: CockpitComponent.References,
   person: CockpitComponent.Person,
   timeline: CockpitComponent.Timeline,
-  principles: CockpitComponent.Principles,
   contact: CockpitComponent.Contact,
+  principles: CockpitComponent.Principles,
 };
 
-const CockpitComponents = ({ components }) =>
+const CockpitComponents = ({ components, inView }) =>
   components.map(({ component, settings, columns, children }, index) => {
     if (!availableComponents[component]) return null;
 
     const Component = availableComponents[component];
+    const componentProps = { ...settings, inView };
 
     return (
       <Component
-        {...settings}
+        {...componentProps}
         columns={columns}
         componentChildren={children}
         key={`component-${index}`}

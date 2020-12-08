@@ -47,7 +47,19 @@ const Contact = () => {
   };
 
   return (
-    <S.ContactForm onChange={handleInputChange} onSubmit={handleFormSubmit}>
+    <S.ContactForm
+      onChange={handleInputChange}
+      onSubmit={handleFormSubmit}
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: { opacity: 0, top: 100 },
+        visible: {
+          opacity: 1,
+          top: 0,
+        },
+      }}
+    >
       <Row>
         <Col xs="12" md="6">
           <TextField id="name" label="Name, Vorname" value={formInputs.name} required />

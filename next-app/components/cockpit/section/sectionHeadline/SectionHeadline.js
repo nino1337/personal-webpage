@@ -3,9 +3,9 @@ import React from 'react';
 
 import * as S from './SectionHeadline.styles';
 
-const SectionHeadline = ({ text }) => (
-  <S.SectionHeadline>
-    <h2>{text}</h2>
+const SectionHeadline = (props) => (
+  <S.SectionHeadline {...props}>
+    <h2>{props.text}</h2>
   </S.SectionHeadline>
 );
 

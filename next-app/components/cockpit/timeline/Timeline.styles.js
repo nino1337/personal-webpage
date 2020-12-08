@@ -1,5 +1,6 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
 import mq from '../../../styles/mq';
 
@@ -8,22 +9,34 @@ export const Timeline = styled.ul`
   flex-direction: column;
   position: relative;
   z-index: 10;
+`;
 
-  &::after {
-    background-color: ${({ theme }) => theme.colors.primary};
-    content: '';
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    height: 100%;
-    z-index: -1;
+export const TimelineLine = styled.span`
+  animation: timeline 0.8s ease-out 1s;
+  animation-fill-mode: forwards;
+  background-color: ${({ theme }) => theme.colors.primary};
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 0;
+  transform: translateX(-50%);
+  width: 3px;
+  z-index: -1;
+
+  @keyframes timeline {
+    from {
+      max-height: 0;
+      height: 100%;
+    }
+    to {
+      max-height: 1000px;
+      height: 100%;
+    }
   }
 `;
 
-export const TimelineItem = styled.li`
+export const TimelineItem = styled(motion.li)`
   border-radius: 3px;
   box-shadow: ${({ theme }) => theme.colors.boxShadow};
   background-color: ${({ theme }) => theme.colors.white};
@@ -48,7 +61,6 @@ export const TimelineJobtitle = styled.h3`
 `;
 
 export const TimelineCompany = styled.p`
-  font-size: 2.4rem;
   margin: 0;
 `;
 

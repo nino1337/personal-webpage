@@ -1,6 +1,8 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
+import mq from '../../../styles/mq';
+
 export const NavContainer = styled.div`
   height: ${({ navHeight }) => `${navHeight}px`};
   position: relative;
@@ -34,7 +36,11 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   display: flex;
-  margin-right: 20px;
+  margin-right: 1rem;
+
+  ${mq.md} {
+    margin-right: 2rem;
+  }
 
   &::last-of-type: {
     margin-right: 0;
@@ -42,29 +48,36 @@ export const Item = styled.li`
 `;
 
 export const Link = styled.a`
-  color: ${({ theme, isActive }) => (isActive ? theme.colors.secondary : theme.colors.text)};
-  font-size: 1.8rem;
+  color: ${({ theme, isActive }) => (isActive ? theme.colors.primary : theme.colors.text)};
+  font-size: 1.4rem;
   overflow: hidden;
-  padding: 16px;
+  padding: 1rem;
   position: relative;
+
+  ${mq.md} {
+    font-size: 1.8rem;
+    padding: 1.6rem;
+  }
 
   &::after {
     content: '';
-    background-color: ${({ theme }) => theme.colors.secondary};
+    background-color: ${({ theme }) => theme.colors.primary};
     bottom: 6px;
     left: 0;
     height: 2px;
     position: absolute;
-    transform: translateX(-100%);
+    transform: translateX(-110%);
     transition: transform 0.2s;
     width: calc(100% - 32px);
   }
 
-  &:hover {
-    color: ${({ theme }) => theme.colors.secondary};
+  ${mq.md} {
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary};
 
-    &::after {
-      transform: translateX(16px);
+      &::after {
+        transform: translateX(16px);
+      }
     }
   }
 `;

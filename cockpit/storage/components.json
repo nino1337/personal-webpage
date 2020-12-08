@@ -100,6 +100,19 @@
                 "width": "1-1",
                 "lst": true,
                 "acl": []
+            },
+            {
+                "name": "minHeight",
+                "label": "Mindest-H\u00f6he",
+                "type": "text",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
             }
         ],
         "group": "Page-Component"

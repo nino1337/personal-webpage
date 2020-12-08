@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
-export const Person = styled.div``;
+export const Person = styled(motion.div)``;
 
 export const PersonImage = styled.div`
   border-radius: 50%;

@@ -42,7 +42,7 @@ const dynamicStyle = (theme) => css`
     line-height: 1.6rem;
     margin: 0;
     overflow-x: hidden;
-    height: 150vh;
+    width: 100%;
   }
 
   img {

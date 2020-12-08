@@ -6,7 +6,11 @@ import * as S from './Person.styles';
 
 const Person = ({ image, text, socialMedia }) => {
   return (
-    <S.Person>
+    <S.Person
+      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, x: -50 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
       <S.PersonImage>
         <Image image={image} />
       </S.PersonImage>

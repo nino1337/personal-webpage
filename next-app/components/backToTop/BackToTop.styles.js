@@ -9,4 +9,5 @@ export const BackToTop = styled.a`
   bottom: 3.6rem;
   right: 3.6rem;
   color: ${({ theme }) => theme.colors.grey};
+  z-index: 10;
 `;

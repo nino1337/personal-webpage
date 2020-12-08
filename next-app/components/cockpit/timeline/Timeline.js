@@ -8,7 +8,12 @@ const Timeline = ({ item }) => {
   return (
     <S.Timeline>
       {item.map(({ value }, index) => (
-        <S.TimelineItem key={value.fromTo}>
+        <S.TimelineItem
+          key={value.fromTo}
+          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 50 }}
+          transition={{ duration: 0.4, delay: index * 0.15, ease: 'easeOut' }}
+        >
           <S.TimelineMeta>
             {value.fromTo} / {value.type}
           </S.TimelineMeta>
@@ -21,6 +26,7 @@ const Timeline = ({ item }) => {
           </S.TimelineImage>
         </S.TimelineItem>
       ))}
+      <S.TimelineLine />
     </S.Timeline>
   );
 };

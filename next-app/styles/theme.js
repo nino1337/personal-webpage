@@ -1,4 +1,4 @@
-const lightGrey = '#ebebeb';
+const lightGrey = '#f7f7f7';
 const shadows = '#191813';
 const white = '#ffffff';
 const midtones = '#963eaa';
@@ -8,6 +8,7 @@ const theme = {
   colors: {
     white,
     lightGrey,
+    grey: '#333333',
     error: '#e85555',
     text: shadows,
     primary: midtones,

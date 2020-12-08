@@ -68,13 +68,19 @@ export const Button = styled.a`
     css`
       background-color: ${theme.colors.white};
       padding: 0;
+      font-weight: bold;
       min-width: auto;
-      color: ${theme.colors.secondary};
+      color: ${theme.colors.primary};
       text-decoration: underline;
     `}
 
-  &[disabled] {
-    color: ${({ theme }) => theme.colors.white} !important;
-    background-color: ${({ theme }) => theme.colors.grey} !important;
-  }
+    ${({ disabled, theme }) =>
+    disabled &&
+    css`
+      cursor: not-allowed;
+      color: ${theme.colors.grey} !important;
+      background-color: ${theme.colors.white} !important;
+      opacity: 0.5;
+      text-decoration: none;
+    `}
 `;

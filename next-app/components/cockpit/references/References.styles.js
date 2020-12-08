@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
+import mq from '../../../styles/mq';
+
 export const ReferencesContainer = styled(motion.ul)`
   display: flex;
   justify-content: center;
@@ -16,10 +18,13 @@ export const Reference = styled(motion.li)`
   overflow: hidden;
   border-radius: 3px;
   max-width: 350px;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
   width: 100%;
   position: relative;
+
+  ${mq.md} {
+    margin-right: 2rem;
+  }
 `;
 
 export const TeaserContent = styled.div`
@@ -37,7 +42,7 @@ export const TeaserImage = styled.div`
   }
 `;
 
-export const ShowMoreButton = styled.div`
+export const ShowMoreButton = styled(motion.div)`
   display: flex;
   justify-content: center;
 `;

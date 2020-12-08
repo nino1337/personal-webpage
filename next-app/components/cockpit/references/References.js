@@ -31,6 +31,7 @@ const References = ({ references }) => {
   };
 
   const onShowMoreButtonClick = () => {
+    if (referencesLeft.length === 0) return;
     setVisibleReferences((prevVisibleReferences) => [
       ...prevVisibleReferences,
       ...referencesLeft.slice(0, SHOW_MORE_COUNT),
@@ -38,6 +39,8 @@ const References = ({ references }) => {
     setReferencesLeft((prevReferencesLeft) => [
       ...prevReferencesLeft.slice(SHOW_MORE_COUNT, prevReferencesLeft.length),
     ]);
+
+    window.scrollBy(0, 345);
   };
 
   return (
@@ -46,19 +49,9 @@ const References = ({ references }) => {
         {visibleReferences.map(({ value: reference }) => (
           <S.Reference
             key={reference.teaserHeadline}
-            initial="hidden"
-            animate="visible"
-            custom={parseInt(reference.animationDelay, 10) || 1}
-            variants={{
-              hidden: { opacity: 0, top: 20 },
-              visible: (i) => ({
-                opacity: 1,
-                top: 0,
-                transition: {
-                  delay: i * 0.2,
-                },
-              }),
-            }}
+            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.6, delay: reference.animationDelay * 0.15, ease: 'easeOut' }}
           >
             <S.TeaserImage>
               <Image image={reference.teaserImage} />
@@ -86,11 +79,26 @@ const References = ({ references }) => {
           </S.Reference>
         ))}
       </S.ReferencesContainer>
-      {referencesLeft.length > 0 && (
-        <S.ShowMoreButton>
-          <Button variant="ghost" text="Mehr anzeigen" onClick={onShowMoreButtonClick} />
-        </S.ShowMoreButton>
-      )}
+      <S.ShowMoreButton
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              delay: 0.6,
+            },
+          },
+        }}
+      >
+        <Button
+          variant="ghost"
+          text="Mehr anzeigen"
+          onClick={onShowMoreButtonClick}
+          disabled={referencesLeft.length === 0}
+        />
+      </S.ShowMoreButton>
       <Modal open={modal.open} onClose={onGalleryClose}>
         <Gallery gallery={modal.gallery} />
       </Modal>

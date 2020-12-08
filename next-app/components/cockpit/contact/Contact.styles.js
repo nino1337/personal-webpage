@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
-export const ContactForm = styled.form`
+export const ContactForm = styled(motion.form)`
+  position: relative;
   .MuiFormControl-root {
     box-shadow: ${({ theme }) => theme.colors.boxShadow};
     margin-bottom: 1.6rem;

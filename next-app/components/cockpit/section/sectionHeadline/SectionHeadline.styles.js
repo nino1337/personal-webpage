@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
-export const SectionHeadline = styled.div`
+export const SectionHeadline = styled(motion.div)`
   text-align: center;
   margin-bottom: 6.4rem;
+  position: relative;
 
   h2 {
     position: relative;
