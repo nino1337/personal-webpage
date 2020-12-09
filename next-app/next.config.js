@@ -5,6 +5,7 @@ module.exports = withImages({
   env: {
     COCKPIT_API_KEY: process.env.COCKPIT_API_KEY,
     COCKPIT_BASE_URL: process.env.COCKPIT_BASE_URL,
+    BASE_URL: process.env.BASE_URL,
   },
   tralingSlash: true,
   exportTrailingSlash: true,
