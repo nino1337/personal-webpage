@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "dotenv next dev",
-    "build": "dotenv -e .env.production next build && next export",
+    "build": "dotenv -e .env.production next build",
     "start": "next start",
+    "deploy": "scp -r ./.next/. ninodev@ninodev.uber.space:/var/www/virtual/ninodev/html/",
     "test": "jest --coverage",
     "test:watch": "yarn test -- --watch"
   },

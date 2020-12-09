@@ -8,7 +8,7 @@ const Image = ({ isCockpitImage = true, image, height, width }) => (
     height={height}
     width={width}
     alt={image.meta && image.meta.title}
-    src={isCockpitImage ? process.env.COCKPIT_BASE_URL + image.path : image.path}
+    src={isCockpitImage ? process.env.BASE_URL + image.path : image.path}
   />
 );
 

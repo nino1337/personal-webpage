@@ -18,7 +18,7 @@ const Layout = () => {
         }`}</title>
         <meta name="description" content={currentPage.metaDescription} />
         {!currentPage.indexable && <meta name="robots" content="noindex" />}
-        <link rel="icon" href={process.env.COCKPIT_BASE_URL + siteSettings.favIcon.path} />
+        <link rel="icon" href={process.env.BASE_URL + siteSettings.favIcon.path} />
       </Head>
       <S.Main>
         {currentPage.components && <CockpitComponents components={currentPage.components} />}

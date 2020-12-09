@@ -4,6 +4,9 @@
   "license": "MIT",
   "scripts": {
     "start": "docker-compose up -d",
-    "docker:login": "docker exec -it cockpit /bin/bash"
+    "docker:login": "docker exec -it cockpit /bin/bash",
+    "deploy:storage": "scp -r ./storage/* ninodev@ninodev.uber.space:/var/www/virtual/ninodev/html/admin/storage/",
+    "deploy:config": "scp -r ./config/* ninodev@ninodev.uber.space:/var/www/virtual/ninodev/html/admin/config/",
+    "deploy:addons": "scp -r ./addons/* ninodev@ninodev.uber.space:/var/www/virtual/ninodev/html/admin/addons/"
   }
 }
