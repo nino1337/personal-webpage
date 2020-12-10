@@ -5,6 +5,7 @@ import Modal from '../../modal/Modal';
 import Button from '../button/Button';
 import Gallery from '../gallery/Gallery';
 import Image from '../image/Image';
+import Text from '../text/Text';
 import * as S from './References.styles';
 
 const References = ({ references }) => {
@@ -58,7 +59,7 @@ const References = ({ references }) => {
             </S.TeaserImage>
             <S.TeaserContent>
               <S.TeaserHeadline>{reference.teaserHeadline}</S.TeaserHeadline>
-              <S.TeaserText>{reference.teaserText}</S.TeaserText>
+              <Text text={reference.teaserText} />
               <S.CtaContainer>
                 <Button
                   variant="primary"

@@ -58,7 +58,7 @@ const dynamicStyle = (theme) => css`
   }
 
   p {
-    line-height: 1;
+    line-height: 1.2;
   }
 
   a {
@@ -100,10 +100,10 @@ const dynamicStyle = (theme) => css`
   }
 
   h3 {
-    font-size: 2.4rem;
+    font-size: 2rem;
 
     ${mq.lg} {
-      font-size: 3rem;
+      font-size: 2.6rem;
     }
   }
 `;

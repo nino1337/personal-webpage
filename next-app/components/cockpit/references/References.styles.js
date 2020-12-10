@@ -25,10 +25,19 @@ export const Reference = styled(motion.li)`
   ${mq.md} {
     margin-right: 2rem;
   }
+
+  &:hover {
+    img {
+      filter: grayscale(0);
+    }
+  }
 `;
 
 export const TeaserContent = styled.div`
   padding: 1.6rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const TeaserImage = styled.div`
@@ -36,9 +45,11 @@ export const TeaserImage = styled.div`
   overflow: hidden;
 
   img {
+    transition: filter 0.5s;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: grayscale(1);
   }
 `;
 
@@ -53,6 +64,7 @@ export const TeaserHeadline = styled.h3``;
 
 export const CtaContainer = styled.div`
   display: flex;
+  margin-top: auto;
 
   a {
     margin-right: 1.6rem;
