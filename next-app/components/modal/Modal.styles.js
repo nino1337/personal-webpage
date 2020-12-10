@@ -6,7 +6,7 @@ export const ModalContent = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 800px;
+  max-width: 1200px;
   width: 95%;
   position: relative;
 `;

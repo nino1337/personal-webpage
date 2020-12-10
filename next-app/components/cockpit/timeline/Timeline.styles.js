@@ -2,8 +2,6 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
-import mq from '../../../styles/mq';
-
 export const Timeline = styled.ul`
   display: flex;
   flex-direction: column;
@@ -42,16 +40,12 @@ export const TimelineItem = styled(motion.li)`
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-direction: column;
-  margin-bottom: 2.6rem;
+  margin-bottom: 2rem;
   padding: 1.6rem 8rem 1.6rem 1.6rem;
   position: relative;
 
   &:last-of-type {
     margin-bottom: 0;
-  }
-
-  ${mq.md} {
-    margin-bottom: 6rem;
   }
 `;
 

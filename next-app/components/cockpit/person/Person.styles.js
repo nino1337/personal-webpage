@@ -8,6 +8,7 @@ export const PersonImage = styled.div`
   overflow: hidden;
   max-width: 260px;
   margin-bottom: 1.6rem;
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
 `;
 
 export const PersonSocialMedia = styled.ul`

@@ -18,7 +18,7 @@ export const Reference = styled(motion.li)`
   overflow: hidden;
   border-radius: 3px;
   max-width: 350px;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   width: 100%;
   position: relative;
 
