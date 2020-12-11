@@ -66,7 +66,7 @@ export const Button = styled.a`
     ${({ variant, theme }) =>
     variant === 'ghost' &&
     css`
-      background-color: ${theme.colors.white};
+      background-color: transparent;
       padding: 0;
       font-weight: bold;
       min-width: auto;
@@ -79,7 +79,7 @@ export const Button = styled.a`
     css`
       cursor: not-allowed;
       color: ${theme.colors.grey} !important;
-      background-color: ${theme.colors.white} !important;
+      background-color: transparent !important;
       opacity: 0.5;
       text-decoration: none;
     `}

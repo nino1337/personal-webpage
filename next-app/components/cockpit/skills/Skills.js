@@ -47,6 +47,7 @@ const Skills = ({ mainSkills, moreSkills }) => (
           arrows: false,
         }}
         slideWidth={80}
+        hoverOnImage
       />
     </S.MoreSkills>
   </S.Skills>

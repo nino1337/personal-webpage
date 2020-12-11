@@ -23,6 +23,7 @@ Image.propTypes = {
   height: propTypes.string,
   width: propTypes.string,
   isCockpitImage: propTypes.bool,
+  hover: propTypes.bool,
 };
 
 export default Image;
