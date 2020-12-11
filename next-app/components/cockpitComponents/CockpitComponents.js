@@ -19,6 +19,7 @@ const availableComponents = {
   timeline: CockpitComponent.Timeline,
   contact: CockpitComponent.Contact,
   principles: CockpitComponent.Principles,
+  skills: CockpitComponent.Skills,
 };
 
 const CockpitComponents = ({ components, inView }) =>

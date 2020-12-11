@@ -22,6 +22,10 @@ const theme = {
         text: shadows,
         background: lightGrey,
       },
+      dark: {
+        text: white,
+        background: shadows,
+      },
     },
     boxShadow: '0px 3px 6px 0px rgba(25, 24, 19, 0.16)',
   },

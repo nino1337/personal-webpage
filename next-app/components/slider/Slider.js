@@ -9,7 +9,7 @@ import SlickSlider from 'react-slick';
 import Image from '../cockpit/image/Image';
 import * as S from './Slider.styles';
 
-const Slider = ({ items, settings = {} }) => {
+const Slider = ({ items, settings = {}, slideWidth }) => {
   const defaultSettings = {
     autoplay: false,
     infinite: true,
@@ -19,10 +19,10 @@ const Slider = ({ items, settings = {} }) => {
 
   const sliderSettings = { ...defaultSettings, ...settings };
   return (
-    <S.Slider>
+    <S.Slider slideWidth={slideWidth}>
       <SlickSlider {...sliderSettings}>
         {items.map((item) => (
-          <Image image={item} key={item.meta.title} />
+          <Image image={item} key={item.path} />
         ))}
       </SlickSlider>
     </S.Slider>
@@ -32,6 +32,7 @@ const Slider = ({ items, settings = {} }) => {
 Slider.propTypes = {
   items: propTypes.array,
   settings: propTypes.object,
+  slideWidth: propTypes.number,
 };
 
 export default Slider;

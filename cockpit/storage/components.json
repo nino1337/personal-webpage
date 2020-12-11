@@ -67,7 +67,7 @@
                 "localize": false,
                 "options": {
                     "cls": "",
-                    "options": "lightGrey, white",
+                    "options": "lightGrey, white, dark",
                     "default": "white"
                 },
                 "width": "1-1",
@@ -456,6 +456,71 @@
                 "group": "",
                 "localize": false,
                 "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            }
+        ],
+        "group": "Page-Component"
+    },
+    "skills": {
+        "label": "F\u00e4higkeiten",
+        "dialog": "normal",
+        "children": false,
+        "fields": [
+            {
+                "name": "mainSkills",
+                "label": "Skills",
+                "type": "repeater",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": {
+                    "field": {
+                        "type": "set",
+                        "name": "skill",
+                        "label": "Skill",
+                        "options": {
+                            "fields": [
+                                {
+                                    "type": "image",
+                                    "name": "icon",
+                                    "label": "Icon"
+                                },
+                                {
+                                    "type": "text",
+                                    "name": "title",
+                                    "label": "Titel"
+                                },
+                                {
+                                    "type": "textarea",
+                                    "name": "description",
+                                    "label": "Beschreibung"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            },
+            {
+                "name": "moreSkills",
+                "label": "weitere Skills",
+                "type": "gallery",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": {
+                    "field": {
+                        "type": "image",
+                        "name": "icon",
+                        "label": "Icon"
+                    }
+                },
                 "width": "1-1",
                 "lst": true,
                 "acl": []

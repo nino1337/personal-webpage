@@ -1,3 +1,4 @@
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 export const Slider = styled.div`
@@ -19,4 +20,20 @@ export const Slider = styled.div`
   .slick-next {
     right: 0;
   }
+
+  img {
+    max-height: 100%;
+  }
+
+  ${({ slideWidth }) =>
+    slideWidth &&
+    css`
+      .slick-slide {
+        height: ${slideWidth}px;
+
+        > div {
+          height: 100%;
+        }
+      }
+    `}
 `;

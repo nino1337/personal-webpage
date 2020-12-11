@@ -28,7 +28,17 @@ export const Section = styled.section`
       color: ${theme.colors.sections.lightGrey.text};
     `}
 
-    .container {
-    transition: visibility 0.1s;
-  }
+  ${({ variant, theme }) =>
+    variant === 'lightGrey' &&
+    css`
+      background-color: ${theme.colors.sections.lightGrey.background};
+      color: ${theme.colors.sections.lightGrey.text};
+    `}
+
+  ${({ variant, theme }) =>
+    variant === 'dark' &&
+    css`
+      background-color: ${theme.colors.sections.dark.background};
+      color: ${theme.colors.sections.dark.text};
+    `}
 `;

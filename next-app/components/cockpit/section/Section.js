@@ -51,7 +51,7 @@ const Section = ({
 
 Section.propTypes = {
   id: propTypes.string,
-  variant: propTypes.oneOf(['white', 'lightGrey']),
+  variant: propTypes.oneOf(['white', 'lightGrey', 'dark']),
   componentChildren: propTypes.array,
   isFullWidth: propTypes.bool,
   headline: propTypes.string,

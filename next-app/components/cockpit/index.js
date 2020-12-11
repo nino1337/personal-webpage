@@ -13,3 +13,4 @@ export { default as Timeline } from './timeline/Timeline';
 export { default as StickyNavigation } from './stickyNavigation/StickyNavigation';
 export { default as Principles } from './principles/Principles';
 export { default as Contact } from './contact/Contact';
+export { default as Skills } from './skills/Skills';
