@@ -10,7 +10,7 @@ export const Timeline = styled.ul`
 `;
 
 export const TimelineLine = styled.span`
-  animation: timeline 1s ease-out 0.4s;
+  animation: timeline 1s ease-out 0.8s;
   animation-fill-mode: forwards;
   background-color: ${({ theme }) => theme.colors.primary};
   pointer-events: none;
