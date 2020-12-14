@@ -1,5 +1,6 @@
+import { useAnimation } from 'framer-motion';
 import propTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Modal from '../../modal/Modal';
 import Button from '../button/Button';
@@ -8,7 +9,7 @@ import Image from '../image/Image';
 import Text from '../text/Text';
 import * as S from './References.styles';
 
-const References = ({ references }) => {
+const References = ({ references, inView }) => {
   const SHOW_MORE_COUNT = 3;
   const [visibleReferences, setVisibleReferences] = useState(references.slice(0, 3));
   const [referencesLeft, setReferencesLeft] = useState(references.slice(3, references.length));
@@ -16,6 +17,8 @@ const References = ({ references }) => {
     open: false,
     gallery: [],
   });
+  const animationReferences = useAnimation();
+  const animationShowMore = useAnimation();
 
   const onGalleryOpen = (websiteGallery) => {
     setModal({
@@ -44,13 +47,23 @@ const References = ({ references }) => {
     window.scrollBy(0, 345);
   };
 
+  useEffect(() => {
+    if (inView) {
+      animationReferences.start({ opacity: 1, y: 0 });
+    }
+  }, [visibleReferences, inView]);
+
+  if (inView) {
+    animationShowMore.start({ opacity: 1 });
+  }
+
   return (
     <>
       <S.ReferencesContainer>
         {visibleReferences.map(({ value: reference }) => (
           <S.Reference
             key={reference.teaserHeadline}
-            animate={{ opacity: 1, y: 0 }}
+            animate={animationReferences}
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.6, delay: reference.animationDelay * 0.15, ease: 'easeOut' }}
           >
@@ -81,17 +94,9 @@ const References = ({ references }) => {
         ))}
       </S.ReferencesContainer>
       <S.ShowMoreButton
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: {
-              delay: 0.6,
-            },
-          },
-        }}
+        animate={animationReferences}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }}
       >
         <Button
           variant="ghost"
@@ -120,6 +125,7 @@ References.propTypes = {
       }),
     })
   ),
+  inView: propTypes.bool,
 };
 
 export default References;

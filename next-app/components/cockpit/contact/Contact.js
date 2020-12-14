@@ -1,4 +1,6 @@
 import { TextField } from '@material-ui/core';
+import { useAnimation } from 'framer-motion';
+import propTypes from 'prop-types';
 import React, { useState } from 'react';
 import { Col, Row } from 'reactstrap';
 
@@ -6,7 +8,7 @@ import { forms } from '../../../axios';
 import Button from '../button/Button';
 import * as S from './Contact.styles';
 
-const Contact = () => {
+const Contact = ({ inView }) => {
   const [formInputs, setFormInputs] = useState({
     name: '',
     mail: '',
@@ -17,6 +19,7 @@ const Contact = () => {
     submitted: false,
     error: false,
   });
+  const animationContact = useAnimation();
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -46,19 +49,16 @@ const Contact = () => {
     }));
   };
 
+  if (inView) {
+    animationContact.start({ opacity: 1, top: 0 });
+  }
+
   return (
     <S.ContactForm
       onChange={handleInputChange}
       onSubmit={handleFormSubmit}
-      initial="hidden"
-      animate="visible"
-      variants={{
-        hidden: { opacity: 0, top: 100 },
-        visible: {
-          opacity: 1,
-          top: 0,
-        },
-      }}
+      initial={{ opacity: 0, top: 100 }}
+      animate={animationContact}
     >
       <Row>
         <Col xs="12" md="6">
@@ -98,6 +98,10 @@ const Contact = () => {
       )}
     </S.ContactForm>
   );
+};
+
+Contact.propTypes = {
+  inView: propTypes.bool,
 };
 
 export default Contact;

@@ -9,29 +9,16 @@ export const Timeline = styled.ul`
   z-index: 10;
 `;
 
-export const TimelineLine = styled.span`
-  animation: timeline 1s ease-out 0.8s;
-  animation-fill-mode: forwards;
+export const TimelineLine = styled(motion.span)`
   background-color: ${({ theme }) => theme.colors.primary};
   pointer-events: none;
   position: absolute;
   bottom: 0;
   left: 50%;
-  height: 0;
   transform: translateX(-50%);
   width: 3px;
   z-index: -1;
-
-  @keyframes timeline {
-    from {
-      max-height: 0;
-      height: 100%;
-    }
-    to {
-      max-height: 1000px;
-      height: 100%;
-    }
-  }
+  max-height: 100%;
 `;
 
 export const TimelineItem = styled(motion.li)`
