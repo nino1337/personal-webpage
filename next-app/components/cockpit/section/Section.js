@@ -46,7 +46,6 @@ const Section = ({
             components={componentChildren}
             style={{ opacity: showComponents ? 1 : 0 }}
             inView={showComponents}
-            asslord="asslord"
           />
         </Container>
       </div>
@@ -67,5 +66,5 @@ Section.propTypes = {
 };
 
 export default handleViewport(Section, {
-  threshold: 0.8,
+  threshold: 0.4,
 });
