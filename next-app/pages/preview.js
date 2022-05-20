@@ -17,7 +17,7 @@ export default function Preview() {
     return () => {
       window.removeEventListener('message', handlePreviewData);
     };
-  });
+  }, []);
 
   return (
     <LocalizationContext.Provider value={{ ...context, currentPage }}>
