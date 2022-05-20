@@ -16,8 +16,7 @@
   "plugins": ["react", "prettier", "simple-import-sort"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": "error",
-    "simple-import-sort/sort": "error"
+    "prettier/prettier": "error"
   },
   "globals": {
     "React": "writable"
